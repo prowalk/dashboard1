@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header-login {
+  background-color: #372879;
+}
+
+.btn-login {
+  background-color: #372879;
+  color: #ffffff;
+  border-color: #ffffff;
+}
