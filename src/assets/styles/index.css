@@ -1,0 +1,20 @@
+@import url('../../../node_modules/bootstrap/dist/css/bootstrap.min.css');
+
+body,
+html {
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+    font-family: "Hevetica Neue";
+}
+
+@font-face {
+font-family: 'Helvetica Neue';
+font-style: normal;
+font-weight: normal;
+src: local('Helvetica Neue'), url('../font/HelveticaNeue.otf') format('otf');
+}
+
