@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { RedirectPage } from '../util/redirectPage';
 
 function HeaderLogin() {
     const [state, setstate] = useState({user: '', password : ''}) // useState es una funcion de react para generar estado del componente
@@ -20,6 +21,11 @@ function HeaderLogin() {
     // funcion que se utiliza al enviar la informacion del formulario al backend  se llama la ruta requerida
     const handleSubmit = (e) => {
         e.preventDefault()
+
+        if(state.user.length === 0 || state.password.length === 0){
+            return;
+        }
+        RedirectPage('/home');
     }
     return (
         <div>
@@ -32,7 +38,7 @@ function HeaderLogin() {
                         <input className='ml-1 mr-2 form-control input-login' type='text' value={state.user} name='user' placeholder='USER' onChange={handleChange} />
                     </div>
                     <div className='col-lg-2 col-md-2'> 
-                        <input className='ml-1 mr-2 form-control input-login' type='password' value={state.password} name='user' placeholder='PASSWORD' onChange={handleChange} />
+                        <input className='ml-1 mr-2 form-control input-login' type='password' value={state.password} name='password' placeholder='PASSWORD' onChange={handleChange} />
                     </div>
                     <div className='col-auto'>
                         <button className='btn btn-login' type='submit'>LOGIN</button>

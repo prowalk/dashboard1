@@ -1,0 +1,28 @@
+.navbar-menu {
+    background-color: #372879;
+    width: 100%;
+}
+
+.img-navbar {
+    width: 6.5rem;
+    height: auto;
+}
+
+.input-navbar{
+    width: 6.5rem;
+    padding-top: 1rem;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+}
+
+.label-navbar{
+    padding-top: 0.4rem;
+    font-size: 15px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.nav-item-name{
+    color: #ffffff;
+    font-style: unset;
+}
