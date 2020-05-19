@@ -8,6 +8,9 @@ import Login from '../pages/login'; //login
 import Home from '../pages/home';
 import UserInfo from '../pages/user/Info';
 import PetServices from '../pages/user/PetService';
+import PendingService from '../pages/user/PedingService';
+import AffiliateApproved from '../pages/affiliate/Approved';
+import AffiliatePending from '../pages/affiliate/Pending';
 
 
 
@@ -20,6 +23,10 @@ const Routes = () => {
                 <Route path='/home' component={Home} />
                 <Route path='/user/info' component={UserInfo} />
                 <Route path='/user/pet-service' component={PetServices} />
+                <Route path='/user/pending-service' component={PendingService} />
+
+                <Route path='/affiliate/approved' component={AffiliateApproved} />
+                <Route path='/affiliate/pending' component={AffiliatePending} />
             </Switch>
         </Router>
     )

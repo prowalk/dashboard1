@@ -22,6 +22,10 @@ table{
     width: 100%;
     margin: auto;
 }
+thead{
+    text-align: center;
+    color: #2F2FE7;
+}
 
 .main{
     padding-top: 5rem;

@@ -9,9 +9,9 @@ const NavBar = () => {
         {title: 'HOME', options : null, route: '/home'},
         {title: 'USER', options: [
             {name:'User Info', route: '/user/info'}, {name: 'Current Services', route: '#'},
-            {name:'Pending Services', route: '#'}, {name:'Pet Services', route: '/user/pet-service'}]}, 
+            {name:'Pending Services', route: '/user/pending-service'}, {name:'Pet Services', route: '/user/pet-service'}]}, 
         {title: 'AFFILIATES', options: [
-            {name:'Peding', route: '#'},{name:'Approved', route: '#'}, {name:'ACtive', route: '#'}, {name:'Inactive', route: '#'},
+            {name:'Approved', route: '/affiliate/approved'}, {name:'Peding', route: '/affiliate/pending'}, {name:'Active', route: '#'}, {name:'Inactive', route: '#'},
             {name:'Rejected', route: '#'}, {name:'Blocked', route: '#'}, {name:'All applicants', route: '#'}]}, 
         {title: 'EMPLOYEES', options: [ 
             {name:'HHRR', route: '#'},{name:'Marketing', route: '#'}, {name:'Tecnology', route: '#'}, {name:'Sales', route: '#'},

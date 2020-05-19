@@ -9,9 +9,9 @@ const Table = ({title, values}) => {
         values.forEach((element, index) => {
             let tbody = []
             for (const key in element) {
-                tbody.push((<td>{element[key]}</td>))
+                tbody.push((<td key={key}>{element[key]}</td>))
             }
-            data.push(tbody)
+            data.push(<tr key={index}>{tbody}</tr>)
         })
 
         return data
