@@ -18,3 +18,18 @@ font-weight: normal;
 src: local('Helvetica Neue'), url('../font/HelveticaNeue.otf') format('otf');
 }
 
+table{
+    width: 100%;
+    margin: auto;
+}
+
+.main{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.input-search{
+    width: 8rem;
+}
+
+

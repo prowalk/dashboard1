@@ -6,12 +6,46 @@ import '../assets/styles/navbar.css'
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false)
     const Navs = [
-        {title: 'USER', options: ['User Info', 'Current Services', 'Pending Services', 'Pet Services']}, 
-        {title: 'AFFILIATES', options: ['Peding']}, 
-        {title: 'EMPLOYEES', options: ['HHRR']}, 
-        {title: 'ADMIN', options: ['Admin']},
-        {title: 'MARKETING', options: ['Coupens']}
-        ]
+        {title: 'HOME', options : null, route: '/home'},
+        {title: 'USER', options: [
+            {name:'User Info', route: '/user/info'}, {name: 'Current Services', route: '#'},
+            {name:'Pending Services', route: '#'}, {name:'Pet Services', route: '/user/pet-service'}]}, 
+        {title: 'AFFILIATES', options: [
+            {name:'Peding', route: '#'},{name:'Approved', route: '#'}, {name:'ACtive', route: '#'}, {name:'Inactive', route: '#'},
+            {name:'Rejected', route: '#'}, {name:'Blocked', route: '#'}, {name:'All applicants', route: '#'}]}, 
+        {title: 'EMPLOYEES', options: [ 
+            {name:'HHRR', route: '#'},{name:'Marketing', route: '#'}, {name:'Tecnology', route: '#'}, {name:'Sales', route: '#'},
+            {name:'Admin & Accounting', route: '#'}, {name:'Legal', route: '#'}, {name:'Costumer Services', route: '#'},
+            {name:'Maintenance', route: '#'},{name:'All Employees', route: '#'}]}, 
+        {title: 'ADMIN', options: [
+            {name:'Admin', route: '#'},{name:'Accounting', route: '#'}, {name:'Invoices', route: '#'}, {name:'Refunds', route: '#'},
+            {name:'Affiliates-payout', route: '#'}, {name:'Affiliate Accounts', route: '#'}, {name:'Accounts Receivable', route: '#'},
+            {name:'Debts to pay', route: '#'},{name:'Banks', route: '#'}]},
+        {title: 'MARKETING', options: [
+            {name:'Coupons', route: '#'},{name:'Discounts', route: '#'}, {name:'Email Blast', route: '#'}, {name:'Vendors', route: '#'},
+            {name:'Clients', route: '#'}, {name:'Affiliated Stores', route: '#'}, {name:'Balance Sheet', route: '#'}]},
+        {title: 'LEGAL', options: null, route: '#'},
+        {title: 'STADISTICS', options: null, route: '#'},
+    ]
+
+    const selectCity = [
+        {value: 'new_york', label: 'NEW YORK'},
+        {value: 'miami', label: 'MIAMI'},
+        {value: 'boston', label: 'BOSTON'},
+        {value: 'la', label: 'L.A'},
+        {value: 'chicago', label: 'CHICAGO'},
+        {value: 'san_francisco', label: 'SAN FRANCISCO'}
+    ]
+
+    const selectService = [
+        {value: 'all', label: 'ALL'},
+        {value: 'dog_walking', label: 'DOG WALKING'},
+        {value: 'senior_care', label: 'SENIOR CARE'},
+        {value: 'run_and_errand', label: 'RUN AND ERRAND'},
+        {value: 'meeting_companion', label: 'MEETING COMPANION'},
+        {value: 'dinner_companion', label: 'DINNER COMPANION'},
+        {value: 'grocery_shopping', label: 'GROCERY SHOPPING'},
+    ]
 
 
     const toggle = () => {
@@ -20,65 +54,69 @@ const NavBar = () => {
 
 
     return (
-        <Navbar className='navbar-menu' expand='xl'>
+        <Navbar className='navbar-menu' expand='xl' dark>
             <NavbarBrand>
                 <img src={Prowalk} className='img img-navbar' alt='prowalk' />
             </NavbarBrand>
-                <NavbarBrand className='ml-3 mt-3'>
-                        <input className='form-control-sm input-navbar' />
+                <NavbarBrand className='input-item mt-3'>
+                        <input className='form-control-sm input-navbar' disabled value='3,570' />
                         <br />
                         <p className='label-navbar'>DOWNLOADS</p>
                 </NavbarBrand>
 
                 <NavbarBrand className='mt-3'>
-                    <input className='form-control-sm input-navbar' />
+                    <input className='form-control-sm input-navbar' disabled value='5,450' />
                     <br />
                     <p className='label-navbar'>AFFILIATES</p>
                 </NavbarBrand>
-                    <select className='form-control'>
-                    <option></option>
-                    </select>
-
-                    <br />
-                   { /* <label className='label-navbar'>CITY, STATE</label> */}
-                <NavbarBrand>
-                </NavbarBrand>
-                    <select className='form-control'>
+                <NavbarBrand className='mt-3 select-item'>
+                    <select className='form-control-sm select-navbar'>
+                        {
+                            selectCity.map((item) => ((
+                                <option value={item.value}>{item.label}</option>
+                            )))
+                        }
                     </select>
                     <br />
-                    {/* <label className='label-navbar'>SERVICES</label> */}
-                <NavbarBrand>
+                    <p className='label-navbar'>CITY, STATE</p>
                 </NavbarBrand>
-           <NavbarToggler onClick={toggle} className='mr-2' />
+                <NavbarBrand className='mt-3'>
+                    <select className='form-control-sm select-navbar'>
+                        {
+                            selectService.map((item) => ((
+                                <option value={item.value}>{item.label}</option>
+                            )))
+                        }
+                    </select>
+                    <br />
+                    <p className='label-navbar'>SERVICES</p>
+                </NavbarBrand>
+           <NavbarToggler onClick={toggle} className='nav-toggle mr-2' />
             <Collapse isOpen={isOpen} navbar>
-                <Nav className="ml-auto" navbar>
-                    <NavItem className='nav-item-name'>
-                        <NavLink>HOME</NavLink>
-                    </NavItem>
+                <Nav className="ml-auto mr-2" navbar>
                     {
                         Navs.map(element => ((
-                            <NavItem className='nav-item-name'>
-                                <UncontrolledButtonDropdown>
+                            <NavItem>
+                                {
+                                    element.options === null?
+                                    <NavLink href={element.route} className='nav-item-name'>{element.title}</NavLink>
+                                    :
+                                    <UncontrolledButtonDropdown>
                                     <DropdownToggle tag='span' className='nav-link'>
-                                        {element.title}
+                                        <span className='nav-item-name'>{element.title}</span>
                                     </DropdownToggle>
                                     <DropdownMenu>
                                         {
                                             element.options.map((item) => ((
-                                                <DropdownItem href='#'>{item}</DropdownItem>
+                                                <DropdownItem href={item.route}>{item.name}</DropdownItem>
                                             )))
                                         }
                                     </DropdownMenu>
                                 </UncontrolledButtonDropdown>
+                                }
                             </NavItem>
                         )))
                     }
-                    <NavItem className='nav-item-name'>
-                        <NavLink>LEGAL</NavLink>
-                    </NavItem>
-                    <NavItem className='nav-item-name'>
-                        <NavLink>STADISTICS</NavLink>
-                    </NavItem>
                 </Nav>
             </Collapse>
         </Navbar>

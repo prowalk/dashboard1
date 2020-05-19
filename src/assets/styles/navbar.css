@@ -1,18 +1,46 @@
 .navbar-menu {
     background-color: #372879;
-    width: 100%;
+    color: #ffffff;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff;
 }
 
 .img-navbar {
+    margin-top: -1.2rem;
     width: 6.5rem;
     height: auto;
 }
 
+.input-item{
+    margin-left: 2rem;
+}
+.select-item{
+    margin-left: 2rem;
+}
+
 .input-navbar{
     width: 6.5rem;
-    padding-top: 1rem;
+    height: 2.8rem;
     margin-left: 0.4rem;
     margin-right: 0.4rem;
+    color: #332876;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.input-navbar:disabled{
+    background-color: #ffffff;
+}
+.select-navbar{
+    width: 13rem;
+    margin-top: 1.15rem;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+    margin-bottom: 0.1rem;
+    color: #332876;
+    font-weight: bold;
 }
 
 .label-navbar{
@@ -25,4 +53,55 @@
 .nav-item-name{
     color: #ffffff;
     font-style: unset;
+    cursor: pointer;
+}
+
+.nav-item-name:hover{
+    color: #ffffff;
+}
+
+@media (max-width: 768px){
+    .select-item{
+        margin-left: 7rem !important;
+    }
+}
+
+@media (max-width: 425px){
+    .input-item {
+        margin-left: 8.5rem !important;
+    }
+
+    .select-item{
+        margin-left: 1rem !important;
+    }
+}
+
+@media (max-width: 375px){
+    .input-item {
+        margin-left: 5.5rem !important;
+    }
+
+    .select-item{
+        margin-right: -0.5rem;
+        margin-left: -2.5rem !important;
+    }
+}
+
+@media (max-width: 320px){
+    .img-navbar{
+        margin-right: 5.5rem !important;
+    }
+    .input-item {
+        margin-left: 0rem !important;
+    }
+
+    .select-item{
+        margin-left: 0rem !important;
+    }
+    .select-navbar{
+        margin-top: -3rem !important;
+    }
+    .label-navbar{
+        margin-bottom: 0rem;
+    }
 }

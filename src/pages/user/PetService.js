@@ -2,8 +2,7 @@ import React from 'react'
 import NavBar from "../../components/navbar"
 import Footer from '../../components/footer'
 
-
-const Home = () => {
+const PetServices = () => {
 
     return(
         <>
@@ -12,5 +11,4 @@ const Home = () => {
         </>
     )
 }
-
-export default Home;
+export default PetServices
