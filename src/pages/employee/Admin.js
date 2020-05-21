@@ -8,7 +8,14 @@ const EmployeeAdmin = () => {
     const [search, setSearch] = useState('')
     const titles = ["ID","Name", "Address", "Unit", "City", "State", "ZipCode", "Email", "Personal Email", "Phone-Number", "Departament", "Job Title",' Rate/hr', 'Bonus', 'Begin Date', "Legal"]
     const datas = [
-        {id: 200, name: 'Juan Perez', addres:'3 Street', unnit: 'unit', city: 'New York',state: 'Yk',zipcode:  '58001', email: 'juanperez@mail.com', email_per: 'juanperez@mail.com', phone: '587738821', departament: '', job_title : '', rate: '', bonus:'', begin_date: '',legal: ''}
+        {id: 200, name: 'Juan Perez', addres:'3 Street', unnit: 'unit', city: 'New York',state: 'Yk',zipcode:  '58001', email: 'juanperez@mail.com', email_per: 'juanperez@mail.com', phone: '587738821', departament: '', job_title : '', rate: '', bonus:'', begin_date: '',
+        legal: (<div className='pt-1 pb-1'>
+            <button className='btn btn-table'>ID</button>
+            <button className='btn btn-table'>Insurance</button>
+            <button className='btn btn-table'>Certificates</button>
+            <button className='btn btn-table'>Contract</button>
+            <button className='btn btn-table'>NDA</button>
+            </div>)}
     ]
 
     const handleChange = ({target: {value}}) => {

@@ -8,7 +8,7 @@ const PetServices = () => {
     const [search, setSearch] = useState('')
     const titles = ["Service type","Service Date", "Affiliate", "Address", "Status", "Report", "$ Inovice", "Refund"]
     const datas = [
-        {service_type: '', service_date: '',affiliate: '', addres:'3 Street', status: '',report: '',invoice:  '', refund: ''}
+        {service_type: '', service_date: '',affiliate: '', addres:'3 Street', status: '',report: (<button className='btn btn-table-two'>Report</button>),invoice:  '', refund: (<p className='text-table'>Refund processed</p>)}
     ]
 
     const handleChange = ({target: {value}}) => {

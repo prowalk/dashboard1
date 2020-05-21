@@ -28,12 +28,79 @@ thead{
 }
 
 .main{
-    padding-top: 2rem;
-    padding-bottom: 3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 5rem;
 }
 
 .input-search{
     width: 8rem;
+}
+
+.btn-table {
+    background-color: #372879;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.9rem;
+    width: 6.5rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    border-radius: 0%;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+.btn-table-two {
+    background-color: #F8052A;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.9rem;
+    width: 6.5rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    border-radius: 0%;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+.input-table{
+    border-color: #372879;
+    height: 1.8rem;
+    text-align: center;
+    color: #372879;
+    width: 6.5rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    border-radius: 0%;
+}
+
+.label-table{
+    text-align: center;
+    font-size: 0.9rem;
+    color: #372879;
+    margin-top: 0.4rem;
+    margin-bottom: 0.2rem;
+}
+
+.text-table{
+    font-weight: bold;
+    color: #F8052A;
+    margin-top: 0.4rem;
+    margin-bottom: 0.2rem;
+}
+
+.text-table-two{
+    font-weight: bold;
+    color: #2F2FE7;
+    margin-top: 0.4rem;
+    margin-bottom: 0.2rem;
+}
+
+
+.btn-table:hover{
+    color: #ffffff;
+}
+
+.btn-table-two:hover{
+    color: #ffffff;
 }
 
 .text-title{

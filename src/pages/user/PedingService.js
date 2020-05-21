@@ -6,9 +6,9 @@ import InputSearch from '../../components/inputSeach'
 
 const PendingService = () => {
     const [search, setSearch] = useState('')
-    const titles = ["ID","Name", "Address", "Unit", "City", "State", "ZipCode", "Email", "Phone-Number", "Profile Picture VIDEO", "Profile Picture",  "LEGAL"]
+    const titles = ["Service type","Service Date", "Affiliate", "Address", "Status", "Special Instructions", "$ Inovice", "Refund"]
     const datas = [
-        {id: 200, name: 'Juan Perez', addres:'3 Street', unnit: 'unit', city: 'New York',state: 'Yk',zipcode:  '58001', email: 'juanperez@mail.com', phone: '587738821', profile_video: '', profile : '', legal: ''}
+        {service_type: '', service_date: '',affiliate: '', addres:'3 Street', status: '',special_inst: '',invoice:  '', refund: (<p className='text-table-two'>Refund processed</p>)}
     ]
 
     const handleChange = ({target: {value}}) => {
