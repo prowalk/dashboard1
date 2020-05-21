@@ -20,7 +20,7 @@ const AffiliateApproved = () => {
     return(
         <>
             <NavBar/>
-            <div className='main container'>
+            <div className='main container-fluid w-100'>
                 <InputSearch value={search} handleChange={handleChange} />
                 <Table title={titles} values={datas} />
             </div>

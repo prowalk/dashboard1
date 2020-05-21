@@ -8,14 +8,14 @@ const NavBar = () => {
     const Navs = [
         {title: 'HOME', options : null, route: '/home'},
         {title: 'USER', options: [
-            {name:'User Info', route: '/user/info'}, {name: 'Current Services', route: '#'},
+            {name:'User Info', route: '/user/info'}, {name: 'Current Services', route: '/user/current-service'},
             {name:'Pending Services', route: '/user/pending-service'}, {name:'Pet Services', route: '/user/pet-service'}]}, 
         {title: 'AFFILIATES', options: [
             {name:'Approved', route: '/affiliate/approved'}, {name:'Peding', route: '/affiliate/pending'}, {name:'Active', route: '#'}, {name:'Inactive', route: '#'},
             {name:'Rejected', route: '#'}, {name:'Blocked', route: '#'}, {name:'All applicants', route: '#'}]}, 
         {title: 'EMPLOYEES', options: [ 
             {name:'HHRR', route: '#'},{name:'Marketing', route: '#'}, {name:'Tecnology', route: '#'}, {name:'Sales', route: '#'},
-            {name:'Admin & Accounting', route: '#'}, {name:'Legal', route: '#'}, {name:'Costumer Services', route: '#'},
+            {name:'Admin & Accounting', route: '/employee/admin'}, {name:'Legal', route: '#'}, {name:'Costumer Services', route: '#'},
             {name:'Maintenance', route: '#'},{name:'All Employees', route: '#'}]}, 
         {title: 'ADMIN', options: [
             {name:'Admin', route: '#'},{name:'Accounting', route: '#'}, {name:'Invoices', route: '#'}, {name:'Refunds', route: '#'},
@@ -93,7 +93,7 @@ const NavBar = () => {
                 </NavbarBrand>
            <NavbarToggler onClick={toggle} className='nav-toggle mr-2' />
             <Collapse isOpen={isOpen} navbar>
-                <Nav className="ml-auto mr-2" navbar>
+                <Nav className="ml-auto" navbar>
                     {
                         Navs.map(element => ((
                             <NavItem>

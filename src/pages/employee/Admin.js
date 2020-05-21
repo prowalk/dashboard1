@@ -4,11 +4,11 @@ import Footer from '../../components/footer'
 import Table from '../../components/table'
 import InputSearch from '../../components/inputSeach'
 
-const AffiliatePending = () => {
+const EmployeeAdmin = () => {
     const [search, setSearch] = useState('')
-    const titles = ["ID","Name", "Address", "Unit", "City", "State", "ZipCode", "Email", "Phone-Number", "Profile Picture VIDEO", "Profile Picture", 'Legal']
+    const titles = ["ID","Name", "Address", "Unit", "City", "State", "ZipCode", "Email", "Personal Email", "Phone-Number", "Departament", "Job Title",' Rate/hr', 'Bonus', 'Begin Date', "Legal"]
     const datas = [
-        {id: 200, name: 'Juan Perez', addres:'3 Street', unnit: 'unit', city: 'New York',state: 'Yk',zipcode:  '58001', email: 'juanperez@mail.com', phone: '587738821', profile_video : '', profile: '', legal: ''}
+        {id: 200, name: 'Juan Perez', addres:'3 Street', unnit: 'unit', city: 'New York',state: 'Yk',zipcode:  '58001', email: 'juanperez@mail.com', email_per: 'juanperez@mail.com', phone: '587738821', departament: '', job_title : '', rate: '', bonus:'', begin_date: '',legal: ''}
     ]
 
     const handleChange = ({target: {value}}) => {
@@ -29,4 +29,4 @@ const AffiliatePending = () => {
     )
 }
 
-export default AffiliatePending;
+export default EmployeeAdmin;

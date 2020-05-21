@@ -11,6 +11,8 @@ import PetServices from '../pages/user/PetService';
 import PendingService from '../pages/user/PedingService';
 import AffiliateApproved from '../pages/affiliate/Approved';
 import AffiliatePending from '../pages/affiliate/Pending';
+import CurrentService from '../pages/user/CurrentService';
+import EmployeeAdmin from '../pages/employee/Admin';
 
 
 
@@ -24,9 +26,12 @@ const Routes = () => {
                 <Route path='/user/info' component={UserInfo} />
                 <Route path='/user/pet-service' component={PetServices} />
                 <Route path='/user/pending-service' component={PendingService} />
+                <Route path='/user/current-service' component={CurrentService} />
 
                 <Route path='/affiliate/approved' component={AffiliateApproved} />
                 <Route path='/affiliate/pending' component={AffiliatePending} />
+
+                <Route path='/employee/admin' component={EmployeeAdmin} />
             </Switch>
         </Router>
     )
